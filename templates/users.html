@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Users Searching Form</title>
+</head>
+<body>
+<h1> 用戶搜尋 </h1>
+
+    <form method='post' action= "{{ url_for('info') }}">
+    <input type="hidden" name="user_ID" value="{{ ID }}">
+
+        <tr>
+
+                <div>
+                    <label>名字:</label>
+                    <input type = 'textbox'  name = 'name' required>
+                    <label>  請直接輸入姓名；欲查詢全部請輸入 "all"</label>
+                </div>
+                    <br>
+
+        </tr>
+
+        <p><button type = 'submit'>確認送出</button></p>
+    </form>
+
+            <div>
+                <h5>{{ data }}</h5>
+            </div>
+
+</body>
+</html>
